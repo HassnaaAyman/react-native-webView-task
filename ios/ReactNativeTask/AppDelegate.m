@@ -59,7 +59,7 @@ colourView.alpha = 0;
 #if DEBUG
   InitializeFlipper(application);
 #endif
-
+ 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"ReactNativeTask"
