@@ -4,16 +4,19 @@ import {WebView} from 'react-native-webview';
 import {withSecurityScreen} from './withSecurityScreen';
 
 const App = () => {
+  const createWebView = (uri : string) => {
+    return (
+      <WebView
+        source={{
+          uri: uri,
+        }}
+      />
+    );
+  };
+
   return (
     <View>
-      <View style={{height: '100%'}}>
-        <WebView
-          source={{
-            uri:
-              'https://www.youtube.com/embed?v=9xhKH43llhU&list=PLN3n1USn4xlmyw3ebYuZmGp60mcENitdM&index=1',
-          }}
-        />
-      </View>
+      <View style={{height: '100%'}}>{createWebView('http://mrmaghawrystudents.com/login')}</View>
     </View>
   );
 };
